@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "request" : "~2.67.0"
+    "request" : "~2.67.0",
+    "querystring": "~0.2.0"
   },
   "repository": {
     "type": "git",
