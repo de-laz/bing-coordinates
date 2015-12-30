@@ -1,0 +1,27 @@
+{
+  "name": "bing-coordinates",
+  "version": "0.0.1",
+  "description": "Node wrapper around the Bing Maps REST Services, it returns only the coordinates.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "request" : "~2.67.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/de-laz/bing-coordinates.git"
+  },
+  "keywords": [
+    "coordinates",
+    "bing",
+    "geocode"
+  ],
+  "author": "lazola sifuba",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/de-laz/bing-coordinates/issues"
+  },
+  "homepage": "https://github.com/de-laz/bing-coordinates#readme"
+}
