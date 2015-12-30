@@ -1,6 +1,6 @@
 {
   "name": "bing-coordinates",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Node wrapper around the Bing Maps REST Services, it returns only the coordinates.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,8 @@
   "keywords": [
     "coordinates",
     "bing",
-    "geocode"
+    "geocode",
+    "maps"
   ],
   "author": "lazola sifuba",
   "license": "MIT",
