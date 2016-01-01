@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "cover" : "istanbul cover node_modules/mocha/bin/_mocha"
   },
   "dependencies": {
     "request": "~2.67.0",
