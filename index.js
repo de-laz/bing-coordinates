@@ -1,28 +1,25 @@
 var request = require('request'),
 	querystring = require('querystring');
 
-var v = '0.0.1';
-var options = {
-	q : null,
-	key: null
-};
-
 var params = {
     port: 80,
     url: 'http://dev.virtualearth.net/REST/v1/Locations?',
     headers: {}
 };
 
-function BingCoordinates(){}
+function BingCoordinates(){
+	this.q = null;
+	this.key = null;
+}
 
 BingCoordinates.prototype.setMapKey = function(maps_key){
-	options.key = maps_key;
+	this.key = maps_key;
 }
 
 BingCoordinates.prototype.getCoordinates = function(location, callback){
 
-	if(options.key === null || 
-		typeof options.key === 'undefined'){
+	if(this.key === null || 
+		typeof this.key === 'undefined'){
 		return callback(new Error('Please set your Bing Maps Key.'))
 	}
 
@@ -30,9 +27,9 @@ BingCoordinates.prototype.getCoordinates = function(location, callback){
 		return callback(new Error('Please set a location'));
 	}
 
-	options.q = location;
+	this.q = location;
 
-	retrieveCoordinates(options, function(err, coordinates){
+	retrieveCoordinates({q : this.q, key: this.key}, function(err, coordinates){
 
 		if(err){
 			return callback(err);
@@ -68,7 +65,6 @@ function retrieveCoordinates(options, callback){
 }
 
 function readResponse(json){
-
 	if(!json){
 		return null;
 	}

@@ -1,14 +1,18 @@
 {
   "name": "bing-coordinates",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "Node wrapper around the Bing Maps REST Services, it returns only the coordinates.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "cover" : "istanbul cover node_modules/mocha/bin/_mocha"
   },
   "dependencies": {
     "request": "~2.67.0",
     "querystring": "~0.2.0"
+  },
+  "devDependencies" : {
+    "mocha" : "2.3.4 "
   },
   "repository": {
     "type": "git",
